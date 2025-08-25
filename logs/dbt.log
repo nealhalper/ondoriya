@@ -1,0 +1,153 @@
+[0m13:33:48.390339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E369B3C830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3677C5BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E36BBC3D90>]}
+
+
+============================== 13:33:48.411791 | 37c951f9-8c8e-4642-9cfc-eda9c472c1ce ==============================
+[0m13:33:48.411791 [info ] [MainThread]: Running with dbt=1.10.9
+[0m13:33:48.412655 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt init ondoriya_dbt', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'quiet': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\corne\\.dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m13:33:48.439924 [debug] [MainThread]: Starter project path: C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\.venv\Lib\site-packages\dbt\include\starter_project
+[0m13:33:48.471318 [info ] [MainThread]: 
+Your new dbt project "ondoriya_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:33:48.473097 [info ] [MainThread]: Setting up your profile.
+[0m14:08:50.001013 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027967B80830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000279657F5BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027969C03D90>]}
+
+
+============================== 14:08:50.008814 | c8bc74ad-337b-4cf5-9250-3fdeac066e79 ==============================
+[0m14:08:50.008814 [info ] [MainThread]: Running with dbt=1.10.9
+[0m14:08:50.009722 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'ondoriya_dbt', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug --profiles-dir ondoriya_dbt', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'printer_width': '80', 'empty': 'None', 'log_path': 'logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m14:08:50.031569 [info ] [MainThread]: dbt version: 1.10.9
+[0m14:08:50.032259 [info ] [MainThread]: python version: 3.13.5
+[0m14:08:50.033580 [info ] [MainThread]: python path: C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\.venv\Scripts\python.exe
+[0m14:08:50.034266 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m14:08:50.130625 [info ] [MainThread]: Using profiles dir at ondoriya_dbt
+[0m14:08:50.131319 [info ] [MainThread]: Using profiles.yml file at ondoriya_dbt\profiles.yml
+[0m14:08:50.132031 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\dbt_project.yml
+[0m14:08:50.150580 [info ] [MainThread]: adapter type: duckdb
+[0m14:08:50.151627 [info ] [MainThread]: adapter version: 1.9.4
+[0m14:08:50.152585 [info ] [MainThread]: Configuration:
+[0m14:08:50.153528 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:08:50.154362 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:08:50.155209 [info ] [MainThread]: Required dependencies:
+[0m14:08:50.155857 [debug] [MainThread]: Executing "git --help"
+[0m14:08:50.200048 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:08:50.200448 [debug] [MainThread]: STDERR: "b''"
+[0m14:08:50.200776 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:08:50.201293 [info ] [MainThread]: Connection:
+[0m14:08:50.201725 [info ] [MainThread]:   database: bronze
+[0m14:08:50.202141 [info ] [MainThread]:   schema: main
+[0m14:08:50.202570 [info ] [MainThread]:   path: D:/data/ondoriya/bronze.duckdb
+[0m14:08:50.203001 [info ] [MainThread]:   config_options: None
+[0m14:08:50.203409 [info ] [MainThread]:   extensions: None
+[0m14:08:50.203868 [info ] [MainThread]:   settings: {}
+[0m14:08:50.204396 [info ] [MainThread]:   external_root: .
+[0m14:08:50.204823 [info ] [MainThread]:   use_credential_provider: None
+[0m14:08:50.205243 [info ] [MainThread]:   attach: None
+[0m14:08:50.205624 [info ] [MainThread]:   filesystems: None
+[0m14:08:50.206035 [info ] [MainThread]:   remote: None
+[0m14:08:50.206407 [info ] [MainThread]:   plugins: None
+[0m14:08:50.206858 [info ] [MainThread]:   disable_transactions: False
+[0m14:08:50.207487 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m14:08:50.508422 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m14:08:53.194419 [debug] [MainThread]: Using duckdb connection "debug"
+[0m14:08:53.194762 [debug] [MainThread]: On debug: select 1 as id
+[0m14:08:53.195020 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:08:53.346618 [debug] [MainThread]: DuckDB adapter: Error running SQL: select 1 as id
+[0m14:08:53.347019 [debug] [MainThread]: DuckDB adapter: Rolling back transaction.
+[0m14:08:53.347367 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m14:08:53.347973 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m14:08:53.348464 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\dbt_project.yml> not found
+
+[0m14:08:53.349062 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Runtime Error
+  IO Error: Cannot open file "d:\data\ondoriya\bronze.duckdb": The process cannot access the file because it is being used by another process.
+  
+  File is already open in 
+  C:\Program Files\JetBrains\DataGrip 2025.1.3\jbr\bin\java.exe (PID 52076)
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m14:08:53.350542 [debug] [MainThread]: Command `dbt debug` failed at 14:08:53.350422 after 3.49 seconds
+[0m14:08:53.350977 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:08:53.351311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027969EBA780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027969FD4DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027969D32580>]}
+[0m14:08:53.351681 [debug] [MainThread]: Flushing usage events
+[0m14:08:53.979633 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:09:16.672468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235EEB10830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235EC795BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F0B93D90>]}
+
+
+============================== 14:09:16.680024 | 390b0863-478f-4b87-ba53-0f8997d6e44b ==============================
+[0m14:09:16.680024 [info ] [MainThread]: Running with dbt=1.10.9
+[0m14:09:16.680692 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt debug --profiles-dir ondoriya_dbt', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'log_path': 'logs', 'profiles_dir': 'ondoriya_dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m14:09:16.704035 [info ] [MainThread]: dbt version: 1.10.9
+[0m14:09:16.704658 [info ] [MainThread]: python version: 3.13.5
+[0m14:09:16.705455 [info ] [MainThread]: python path: C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\.venv\Scripts\python.exe
+[0m14:09:16.706283 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m14:09:16.791979 [info ] [MainThread]: Using profiles dir at ondoriya_dbt
+[0m14:09:16.792700 [info ] [MainThread]: Using profiles.yml file at ondoriya_dbt\profiles.yml
+[0m14:09:16.793172 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\dbt_project.yml
+[0m14:09:16.795652 [info ] [MainThread]: adapter type: duckdb
+[0m14:09:16.796140 [info ] [MainThread]: adapter version: 1.9.4
+[0m14:09:16.796640 [info ] [MainThread]: Configuration:
+[0m14:09:16.797117 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:09:16.797569 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m14:09:16.798098 [info ] [MainThread]: Required dependencies:
+[0m14:09:16.798836 [debug] [MainThread]: Executing "git --help"
+[0m14:09:16.848151 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:09:16.848750 [debug] [MainThread]: STDERR: "b''"
+[0m14:09:16.849211 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:09:16.850194 [info ] [MainThread]: Connection:
+[0m14:09:16.850694 [info ] [MainThread]:   database: bronze
+[0m14:09:16.851208 [info ] [MainThread]:   schema: main
+[0m14:09:16.851691 [info ] [MainThread]:   path: D:/data/ondoriya/bronze.duckdb
+[0m14:09:16.852208 [info ] [MainThread]:   config_options: None
+[0m14:09:16.852899 [info ] [MainThread]:   extensions: None
+[0m14:09:16.853579 [info ] [MainThread]:   settings: {}
+[0m14:09:16.854229 [info ] [MainThread]:   external_root: .
+[0m14:09:16.854726 [info ] [MainThread]:   use_credential_provider: None
+[0m14:09:16.855327 [info ] [MainThread]:   attach: None
+[0m14:09:16.855892 [info ] [MainThread]:   filesystems: None
+[0m14:09:16.856421 [info ] [MainThread]:   remote: None
+[0m14:09:16.857118 [info ] [MainThread]:   plugins: None
+[0m14:09:16.857785 [info ] [MainThread]:   disable_transactions: False
+[0m14:09:16.858977 [info ] [MainThread]: Registered adapter: duckdb=1.9.4
+[0m14:09:17.234459 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m14:09:17.297722 [debug] [MainThread]: Using duckdb connection "debug"
+[0m14:09:17.298051 [debug] [MainThread]: On debug: select 1 as id
+[0m14:09:17.298302 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:09:17.314616 [debug] [MainThread]: SQL status: OK in 0.016 seconds
+[0m14:09:17.315462 [debug] [MainThread]: On debug: Close
+[0m14:09:17.315806 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:09:17.316359 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:09:17.316809 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\corne\Documents\NSS_Data_Engineering\ondoriya\dbt_project.yml> not found
+
+[0m14:09:17.317864 [debug] [MainThread]: Command `dbt debug` failed at 14:09:17.317758 after 0.78 seconds
+[0m14:09:17.318154 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:09:17.318449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F0DCA650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F0EE4DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F0CC1040>]}
+[0m14:09:17.318787 [debug] [MainThread]: Flushing usage events
+[0m14:09:17.889646 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:50:09.313867 [debug] [MainThread]: Command `dbt init` succeeded at 14:50:09.311734 after 4581.08 seconds
+[0m14:50:09.316401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E36BC31810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E36BC93AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E36BCEC9E0>]}
+[0m14:50:09.317316 [debug] [MainThread]: Flushing usage events
+[0m14:50:10.049511 [debug] [MainThread]: An error was encountered while trying to flush usage events
