@@ -1,0 +1,6 @@
+ondoriya_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: D:/data/ondoriya/bronze.duckdb

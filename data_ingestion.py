@@ -1,31 +1,10 @@
 import requests
 from minio import Minio
-import os
 import io
-from dotenv import load_dotenv
+import polars as pl
+from config import BASE_URL, MINIO_ENDPOINT, MINIO_ACCESS_KEY, MINIO_SECRET_KEY, MINIO_BUCKET_NAME, FILES_TO_INGEST
 
-load_dotenv()
-
-BASE_URL = os.getenv("BASE_URL")
-
-MINIO_ENDPOINT = os.getenv("MINIO_EXTERNAL_URL")
-MINIO_ACCESS_KEY = os.getenv("MINIO_ACCESS_KEY")
-MINIO_SECRET_KEY = os.getenv("MINIO_SECRET_KEY")
-MINIO_BUCKET_NAME = os.getenv("MINIO_BUCKET_NAME")
-
-FILES_TO_INGEST = [
-    "faction_distribution.csv",
-    "households.csv",
-    "language_building_blocks.csv",
-    "language_roots.csv",
-    "moons.csv",
-    "people.csv",
-    "planets.csv",
-    "region_biome.csv",
-    "regions.csv"
-]
-
-def main():
+def upload_parquet_to_minio():
     minio_client = Minio(
         MINIO_ENDPOINT,
         access_key=MINIO_ACCESS_KEY,
@@ -41,14 +20,19 @@ def main():
         response = requests.get(url)
         response.raise_for_status()
 
-        file_data = io.BytesIO(response.content)
+        df = pl.read_csv(io.BytesIO(response.content))
+        parquet_buffer = io.BytesIO()
+        df.write_parquet(parquet_buffer)
+        parquet_buffer.seek(0)
+
+        parquet_file_name = file_name.replace(".csv", ".parquet")
         minio_client.put_object(
             MINIO_BUCKET_NAME,
-                file_name,
-                file_data,
-                len(response.content)
+            parquet_file_name,
+            parquet_buffer,
+            parquet_buffer.getbuffer().nbytes
         )
-        print(f"Uploaded {file_name} to Minio")
+        print(f"Uploaded {parquet_file_name} to Minio")
 
 if __name__ == "__main__":
-    main()
+    upload_parquet_to_minio()
