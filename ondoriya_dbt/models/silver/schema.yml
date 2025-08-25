@@ -1,0 +1,108 @@
+
+version: 2
+
+sources:
+  - name: bronze
+    schema: main
+    tables:
+      - name: faction_distribution
+      - name: households
+      - name: language_building_blocks
+      - name: language_roots
+      - name: moons
+      - name: people
+      - name: planets
+      - name: region_biome
+      - name: regions
+
+models:
+  - name: people_silver
+    description: "Cleaned people table"
+    columns:
+      - name: person_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "Person's name"
+  - name: households_silver
+    description: "Cleaned households table"
+    columns:
+      - name: household_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: household_id
+        description: "Household ID"
+  - name: faction_distribution_silver
+    description: "Cleaned faction distribution table"
+    columns:
+      - name: faction
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: faction
+        description: "Faction name"
+  - name: regions_silver
+    description: "Cleaned regions table"
+    columns:
+      - name: region_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: region_name
+        description: "Name of the region"
+  - name: region_biome_silver
+    description: "Cleaned region biome table"
+    columns:
+      - name: region_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: bio
+        description: "Biography text"
+  - name: language_building_blocks_silver
+    description: "Cleaned language building blocks table"
+    columns:
+      - name: language_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: block_name
+        description: "Name of the language building block"
+  - name: language_roots_silver
+    description: "Cleaned language roots table"
+    columns:
+      - name: root
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: root_word
+        description: "Root word in the language"
+  - name: planets_silver
+    description: "Cleaned planets table"
+    columns:
+      - name: world_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: planet_name
+        description: "Name of the planet"
+  - name: moons_silver
+    description: "Cleaned moons table"
+    columns:
+      - name: moon_id
+        description: "Unique identifier"
+        tests:
+          - not_null
+          - unique
+      - name: moon_name
+        description: "Name of the moon"
