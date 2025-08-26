@@ -3,4 +3,4 @@ FROM {{ ref('regions_silver') }} r
 JOIN {{ ref('people_silver') }} p ON r.region_id = p.current_region_id
 GROUP BY r.full_name
 ORDER BY region_population DESC
-LIMIT 10
+LIMIT 5

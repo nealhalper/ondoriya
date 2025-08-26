@@ -1,3 +1,3 @@
-SELECT faction FROM {{ ref('faction_distribution_silver') }}
-WHERE faction NOT LIKE 'Factionless' AND faction != 'Total'
+SELECT faction, percent FROM {{ ref('faction_distribution_silver') }}
+WHERE faction != 'Total'
 ORDER BY percent DESC
